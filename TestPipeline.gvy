@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-        stages(test stage 2){
+        stages('test stage 2'){
             stage('ES 4') {
                 steps {
                     echo 'Hello world'
