@@ -14,6 +14,9 @@ pipeline {
                 }
                 echo 'Hello jenkins'
             }
+            failure {
+                input(message: "Proceed to next stage")
+            }
         }
         stage('ES 3') {
             steps {
