@@ -7,7 +7,7 @@ pipeline {
                 script{
                     stage('ES 1') {
                         steps {
-                            echo 'Hello world'
+                            sh 'echo HelloWorld'
                         }
                     }
                     stage('ES 2') {
@@ -20,7 +20,7 @@ pipeline {
                     }
                     stage('ES 3') {
                         steps {
-                            echo 'Hello pipeline'
+                            sh 'echo pipeLine'
                         }
                     }
                 }
@@ -37,7 +37,7 @@ pipeline {
                 script{
                     stage('ES 4') {
                         steps {
-                            echo 'Hello world'
+                            sh 'echo HelloWorld'
                         }
                     }
                 }
