@@ -27,7 +27,7 @@ pipeline {
             }
 
             post {
-                failure {
+                always {
                     input(message: "Proceed to next stage")
                 }
             }
