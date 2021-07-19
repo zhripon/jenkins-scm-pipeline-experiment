@@ -26,11 +26,11 @@ pipeline {
                 }
             }
 
-            post {
-                always {
-                    input(message: "Proceed to next stage")
-                }
-            }
+            // post {
+            //     always {
+            //         input(message: "Proceed to next stage")
+            //     }
+            // }
         }
         stage('test stage 2'){
             steps{
