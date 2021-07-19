@@ -15,7 +15,6 @@ pipeline {
                             catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                                 bat "fdfd sdfds"
                             }
-                            echo 'Hello jenkins'
                         }
                     }
                     stage('ES 3') {
