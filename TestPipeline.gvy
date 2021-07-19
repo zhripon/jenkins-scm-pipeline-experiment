@@ -4,22 +4,24 @@ pipeline {
     stages{
         stage('test stage 1') {
             steps{
-                stage('ES 1') {
-                    steps {
-                        echo 'Hello world'
-                    }
-                }
-                stage('ES 2') {
-                    steps {
-                        catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                            bat "fdfd sdfds"
+                script{
+                    stage('ES 1') {
+                        steps {
+                            echo 'Hello world'
                         }
-                        echo 'Hello jenkins'
                     }
-                }
-                stage('ES 3') {
-                    steps {
-                        echo 'Hello pipeline'
+                    stage('ES 2') {
+                        steps {
+                            catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                                bat "fdfd sdfds"
+                            }
+                            echo 'Hello jenkins'
+                        }
+                    }
+                    stage('ES 3') {
+                        steps {
+                            echo 'Hello pipeline'
+                        }
                     }
                 }
             }
@@ -32,9 +34,11 @@ pipeline {
         }
         stage('test stage 2'){
             steps{
-                stage('ES 4') {
-                    steps {
-                        echo 'Hello world'
+                script{
+                    stage('ES 4') {
+                        steps {
+                            echo 'Hello world'
+                        }
                     }
                 }
             }
