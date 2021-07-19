@@ -10,7 +10,7 @@ pipeline {
         stage('ES 2') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    fgeerg
+                    bat "fdfd sdfds"
                 }
                 echo 'Hello jenkins'
             }
