@@ -6,19 +6,19 @@ pipeline {
             steps{
                 script{
                     stage('ES 1') {
-                        steps {
+                        step {
                             sh 'echo HelloWorld'
                         }
                     }
                     stage('ES 2') {
-                        steps {
+                        step {
                             catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                                 bat "fdfd sdfds"
                             }
                         }
                     }
                     stage('ES 3') {
-                        steps {
+                        step {
                             sh 'echo pipeLine'
                         }
                     }
@@ -35,13 +35,12 @@ pipeline {
             steps{
                 script{
                     stage('ES 4') {
-                        steps {
+                        step {
                             sh 'echo HelloWorld'
                         }
                     }
                 }
             }
         }
-
     }
 }
