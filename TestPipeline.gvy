@@ -7,6 +7,7 @@ pipeline {
                 script{
                     stage('ES 1') {
                         sh 'echo HelloWorld'
+                        input(message: "Proceed to next stage")
                     }
                     stage('ES 2') {
                         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
@@ -19,11 +20,9 @@ pipeline {
                 }
             }
 
-            post {
-                always {
-                    input(message: "Proceed to next stage")
-                }
-            }
+
+            
+
         }
         stage('test stage 2'){
             steps{
