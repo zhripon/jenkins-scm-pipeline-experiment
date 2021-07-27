@@ -5,7 +5,7 @@ pipeline {
         stage('test stage 1') {
             steps{
                 script{
-                    jenkins.model.Jenkins.get.computers.each { c ->
+                    jenkins.model.Jenkins.get().computers.each { c ->
                         if (c.node.labelString.contains(label)) {
                             echo c.node.selfLabel.name
                         }
